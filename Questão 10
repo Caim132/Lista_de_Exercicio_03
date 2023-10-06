@@ -1,0 +1,25 @@
+def gerar_sequencia_fibonacci(num_terms):
+    fibonacci_sequence = []
+    
+    # Caso especial para o primeiro termo
+    if num_terms >= 1:
+        fibonacci_sequence.append(0)
+    
+    # Caso especial para o segundo termo
+    if num_terms >= 2:
+        fibonacci_sequence.append(1)
+    
+    # Gera os termos subsequentes da sequência
+    for i in range(2, num_terms):
+        next_term = fibonacci_sequence[i - 1] + fibonacci_sequence[i - 2]
+        fibonacci_sequence.append(next_term)
+    
+    return fibonacci_sequence
+
+# Solicita ao usuário para inserir o número de termos desejado
+num_terms = int(input("Digite o número de termos da sequência de Fibonacci desejado: "))
+
+# Chama a função e exibe a sequência gerada
+fibonacci_sequence = gerar_sequencia_fibonacci(num_terms)
+print("Sequência de Fibonacci:")
+print(fibonacci_sequence)
