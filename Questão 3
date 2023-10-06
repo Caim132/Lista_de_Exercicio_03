@@ -1,0 +1,17 @@
+import re
+
+def eh_palindromo(frase):
+    # Remove espaços e pontuações da frase e a converte para letras minúsculas
+    frase = re.sub(r'[^a-zA-Z]', '', frase.lower())
+    
+    # Verifica se a frase é igual à sua reversão
+    return frase == frase[::-1]
+
+# Solicita ao usuário para inserir uma palavra ou frase
+entrada = input("Digite uma palavra ou frase para verificar se é um palíndromo: ")
+
+# Chama a função e exibe o resultado
+if eh_palindromo(entrada):
+    print(f"'{entrada}' é um palíndromo!")
+else:
+    print(f"'{entrada}' não é um palíndromo.")
