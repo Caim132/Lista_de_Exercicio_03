@@ -1,0 +1,20 @@
+def contar_vogais(string):
+    # Inicializa a variável de contagem
+    contagem = 0
+    
+    # Define as vogais em uma string
+    vogais = "aeiouAEIOU"
+    
+    # Itera por cada caractere na string
+    for caractere in string:
+        if caractere in vogais:
+            contagem += 1
+    
+    return contagem
+
+# Solicita ao usuário para inserir uma string
+string = input("Digite uma string: ")
+
+# Chama a função e exibe a contagem de vogais
+quantidade_vogais = contar_vogais(string)
+print(f"A quantidade de vogais na string é: {quantidade_vogais}")
