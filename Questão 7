@@ -1,0 +1,21 @@
+def calcular_imc(peso, altura):
+    # Verifica se a altura é positiva (para evitar divisão por zero)
+    if altura <= 0:
+        return "A altura deve ser um valor positivo."
+    
+    # Calcula o IMC
+    imc = peso / (altura ** 2)
+    
+    return imc
+
+# Solicita ao usuário para inserir o peso em quilogramas e a altura em metros
+peso = float(input("Digite seu peso (em quilogramas): "))
+altura = float(input("Digite sua altura (em metros): "))
+
+# Chama a função e exibe o resultado
+resultado = calcular_imc(peso, altura)
+
+if isinstance(resultado, float):
+    print(f"Seu IMC é {resultado:.2f}")
+else:
+    print(resultado)
